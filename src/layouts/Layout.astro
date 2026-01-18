@@ -1,34 +1,35 @@
 ---
-import '../../src/styles/globals.css';
+import '../styles/globals.css';
 import '@fontsource-variable/inter/wght.css';
-import interWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
 
 interface Props {
-    title: string;
+    title?: string;
 }
 
-const { title } = Astro.props;
+const { title = "Hareem Aqdas | Strategic AI Product Owner & Project Leader" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <title>{title}</title>
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="preload" as="font" type="font/woff2" href={interWoff2} crossorigin />
+        <script is:inline src="https://unpkg.com/feather-icons"></script>
     </head>
-    <body class="antialiased text-white bg-complementary">
-        <div class="flex flex-col min-h-screen px-6 bg-noise sm:px-12">
-            <div class="flex flex-col w-full max-w-5xl mx-auto grow">
-                <Header />
-                <main class="grow"><slot /></main>
-                <Footer />
-            </div>
-        </div>
+    <body class="font-sans bg-white text-gray-900 antialiased">
+        <Navbar />
+        <slot />
+        <script is:inline>
+          // Run feather.replace() after page load
+          document.addEventListener('DOMContentLoaded', () => {
+            if (window.feather) {
+              window.feather.replace();
+            }
+          });
+        </script>
     </body>
 </html>

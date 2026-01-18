@@ -1,19 +1,304 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout>
+    <!-- Hero Section -->
+    <section class="min-h-[90vh] flex items-center justify-center px-6 py-20 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center z-10">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">Strategic AI Product Leadership & Project Management</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">Bridging the gap between cutting-edge AI technology and human-centric strategy to deliver measurable business impact.</p>
+            <div class="relative">
+                <div class="absolute -inset-1 bg-gradient-to-r from-gray-400 to-gray-200 rounded-lg blur opacity-25"></div>
+                <div class="relative flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="px-8 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition duration-200 font-medium">Start a Conversation</a>
+                    <a href="#about" class="px-8 py-3 bg-white text-black border border-gray-200 rounded-md hover:bg-gray-50 transition duration-200 font-medium">Explore My Approach</a>
+                </div>
+            </div>
+        </div>
+        <!-- Background decoration -->
+        <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-100 via-white to-white"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">About Me</h2>
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/3">
+                    <div class="relative group">
+                        <img src="https://huggingface.co/spaces/AqdasH/hareem-s-project-pulse/resolve/main/images/ChatGPT%20Image%20Jan%2018,%202026,%2001_24_16%20PM.png" alt="Hareem Aqdas" class="rounded-lg shadow-md w-full transform group-hover:scale-102 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition duration-500"></div>
+                    </div>
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-lg mb-6 leading-relaxed text-gray-700">I'm Hareem Aqdas, a Berlin-based Product & Project Management expert specializing in AI-driven solutions, digital transformation, and agile methodologies.</p>
+                    <p class="text-lg mb-6 leading-relaxed text-gray-700">With 5+ years in AI product development and technical project leadership, I excel at bridging business strategy with cutting-edge technology implementations.</p>
+                    <p class="text-lg leading-relaxed text-gray-700">As an AI-savvy Product Owner and Project Manager, I help organizations leverage machine learning and automation while maintaining focus on delivering measurable business outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section id="services" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">What I Do</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-gray-800">
+                        <i data-feather="clipboard"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Product Strategy</h3>
+                    <p class="text-gray-600">Developing intelligent products and bridging business goals with technical execution.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-200">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-gray-800">
+                        <i data-feather="users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Digital Transformation</h3>
+                    <p class="text-gray-600">Leading successful adoption of new technologies and workflows across business functions.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-200">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-gray-800">
+                        <i data-feather="settings"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Project Leadership</h3>
+                    <p class="text-gray-600">Managing complex international projects with high organizational complexity.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition duration-200">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-gray-800">
+                        <i data-feather="trending-up"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Research & Analysis</h3>
+                    <p class="text-gray-600">Transforming data and qualitative research into actionable strategic insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Professional Experience</h2>
+            <div class="space-y-12">
+                <div class="relative border-l-2 border-gray-200 pl-8 ml-4">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-black border-4 border-white"></span>
+                    <h3 class="text-2xl font-semibold">Product Owner</h3>
+                    <p class="text-gray-600 mb-4 font-medium">DADB – German Academy for Digital Education | Jan 2025 - Present</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>End-to-end management of AI-powered e-learning and knowledge systems</li>
+                        <li>Concept and implementation of an AI-based onboarding bot for knowledge transfer</li>
+                        <li>Translation of complex requirements into structured, implementable AI workflows</li>
+                        <li>Close coordination with internal stakeholders including expectation management</li>
+                    </ul>
+                </div>
+                <div class="relative border-l-2 border-gray-200 pl-8 ml-4">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400 border-4 border-white"></span>
+                    <h3 class="text-2xl font-semibold">Output Editor</h3>
+                    <p class="text-gray-600 mb-4 font-medium">Viory | Oct 2022 - Aug 2025</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Responsible for publishing news packages on company website via CMS</li>
+                        <li>Management and mentoring of junior teams in text, editing and video production</li>
+                        <li>Creation of well-researched articles and news under tight deadlines (&lt;15 min)</li>
+                        <li>Translation and transcription of audio content in EN, DE, UR, HI, PANJ</li>
+                    </ul>
+                </div>
+                <div class="relative border-l-2 border-gray-200 pl-8 ml-4">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400 border-4 border-white"></span>
+                    <h3 class="text-2xl font-semibold">Project Manager</h3>
+                    <p class="text-gray-600 mb-4 font-medium">The Court of the Citizens of the World | May 2024 - Aug 2024</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Lead communication with partners and stakeholders</li>
+                        <li>Responsibility for social media and website content</li>
+                        <li>Successful execution of the 'China Tribunal' in The Hague</li>
+                        <li>Coordination of international project with high political and organizational complexity</li>
+                    </ul>
+                </div>
+                <div class="relative border-l-2 border-gray-200 pl-8 ml-4">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400 border-4 border-white"></span>
+                    <h3 class="text-2xl font-semibold">Broadcast Editor</h3>
+                    <p class="text-gray-600 mb-4 font-medium">Indus News Network | Feb 2021 - Aug 2021</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>News production with focus on research, accuracy and impartiality</li>
+                        <li>Comprehensive expertise in local and international politics</li>
+                    </ul>
+                </div>
+                <div class="relative border-l-2 border-gray-200 pl-8 ml-4">
+                    <span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-400 border-4 border-white"></span>
+                    <h3 class="text-2xl font-semibold">Project Manager</h3>
+                    <p class="text-gray-600 mb-4 font-medium">Forum for Dignity Initiatives | Sep 2020 - Jan 2021</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Development of legislative proposals for central legal reforms</li>
+                        <li>Leadership of projects promoting rights of women and gender minorities</li>
+                        <li>Conducting quantitative research and evaluations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Featured Publications & Media</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Modern Diplomacy</h3>
+                    <p class="text-gray-600 mb-4">Analysis on international relations and digital policy</p>
+                    <a href="https://moderndiplomacy.eu/author/hareemaqdas/" class="inline-flex items-center text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">
+                        View Articles <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Eurasia Review</h3>
+                    <p class="text-gray-600 mb-4">Strategic analysis on global affairs</p>
+                    <a href="https://www.eurasiareview.com/?s=hareem+aqdas" class="inline-flex items-center text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">
+                        View Articles <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Digital Rights Monitor</h3>
+                    <p class="text-gray-600 mb-4">Commentary on technology policy and digital rights</p>
+                    <a href="https://digitalrightsmonitor.pk/author/hareem-aqdas/" class="inline-flex items-center text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">
+                        View Articles <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Academic Research</h3>
+                    <p class="text-gray-600 mb-4">Published academic works and research papers</p>
+                    <a href="https://uni-due.academia.edu/HareemAqdas" class="inline-flex items-center text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">
+                        View Profile <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Daily Times</h3>
+                    <p class="text-gray-600 mb-4">Featured columns and articles</p>
+                    <a href="https://dailytimes.com.pk/writer/hareem-aqdas/" class="inline-flex items-center text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">
+                        View Articles <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-semibold mb-2">AF Network</h3>
+                    <p class="text-gray-600 mb-4">Featured in international directory</p>
+                    <a href="https://af.net/directory/hareem-aqdas/" class="inline-flex items-center text-blue-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">
+                        View Profile <i data-feather="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Featured Media</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/mepnW_waUw4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/S_idZU2h5Tk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Work Section -->
+    <section id="work" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">How I Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-full flex items-center justify-center flex-shrink-0 text-gray-800">
+                        <i data-feather="target"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Strategic Alignment</h3>
+                        <p class="text-gray-600">I ensure every initiative directly supports core business objectives and stakeholder needs.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-full flex items-center justify-center flex-shrink-0 text-gray-800">
+                        <i data-feather="layers"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Agile Execution</h3>
+                        <p class="text-gray-600">Delivering value through iterative progress and adaptive planning in fast-paced environments.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-full flex items-center justify-center flex-shrink-0 text-gray-800">
+                        <i data-feather="message-square"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Stakeholder Management</h3>
+                        <p class="text-gray-600">Bridging the gap between technical teams and business partners with clear, consistent dialogue.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 bg-white shadow-sm rounded-full flex items-center justify-center flex-shrink-0 text-gray-800">
+                        <i data-feather="users"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Team Empowerment</h3>
+                        <p class="text-gray-600">Fostering collaboration and mentoring teams to achieve high-quality outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Let's Build Intelligent Solutions</h2>
+            <p class="text-xl text-gray-600 mb-12">I'm available for AI product strategy, technical project leadership, and smart automation initiatives.</p>
+            <div class="bg-gray-50 p-8 rounded-lg shadow-sm max-w-md mx-auto border border-gray-100">
+                <form 
+                    name="contact" 
+                    method="POST" 
+                    data-netlify="true" 
+                    action="/success"
+                    class="space-y-4"
+                >
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div class="text-left">
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black">
+                    </div>
+                    <div class="text-left">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black">
+                    </div>
+                    <div class="text-left">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition duration-200 cursor-pointer">Send Message</button>
+                </form>
+                <p class="mt-4 text-xs text-gray-400">
+                    Your message will be sent to the owner.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-8">Hareem Aqdas</h2>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.linkedin.com/in/hareem-aqdas-515718192" class="text-gray-400 hover:text-white transition duration-200" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i data-feather="linkedin"></i>
+                </a>
+                <a href="https://x.com/AqdasHareem" class="text-gray-400 hover:text-white transition duration-200" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a href="mailto:aqdas.hareem98@gmail.com" class="text-gray-400 hover:text-white transition duration-200" aria-label="Email">
+                    <i data-feather="mail"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; {new Date().getFullYear()} Hareem Aqdas. All rights reserved.</p>
+        </div>
+    </footer>
 </Layout>
